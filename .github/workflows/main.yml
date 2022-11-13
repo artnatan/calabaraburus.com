@@ -1,0 +1,34 @@
+name: Check code quality
+
+on: [push, pull_request]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Install deps
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+          command: install -d
+          
+      - name: Run black
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+          command: run black --check ./
+
+      - name: Run isort
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+          command: run isort --check-only ./      
+        
+      - name: Run linter
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+          command: run flake8 ./
