@@ -1,6 +1,6 @@
-from turtle import home
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include, path
+
 from ware.views import index
 
 urlpatterns = [

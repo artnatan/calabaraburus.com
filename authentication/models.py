@@ -51,7 +51,7 @@ class User(AbstractBaseUser, PermissionsMixin, TimeStampMixin):
 
     email = models.EmailField(unique=True)
     username = models.CharField(max_length=100, null=True)
-    
+
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)

@@ -1,6 +1,7 @@
-from ware.serializers.products import ProductSerializer, LightProductSerializer
 from rest_framework.generics import ListAPIView, RetrieveAPIView
+
 from ware.models import Product
+from ware.serializers.products import LightProductSerializer, ProductSerializer
 
 
 class ProductListAPI(ListAPIView):

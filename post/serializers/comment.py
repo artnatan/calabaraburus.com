@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from post.models import Comment, Post
 
 
@@ -7,7 +8,7 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = "__all__"
         read_only_fields = ["post", "user", "prev_comment"]
-        
+
     def validate(self, attrs: dict) -> dict:
 
         request = self.context["request"]

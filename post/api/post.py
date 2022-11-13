@@ -1,6 +1,7 @@
-from post.serializers.post import PostSerializer, LightPostSerializer
 from rest_framework.generics import ListAPIView, RetrieveAPIView
+
 from post.models import Post
+from post.serializers.post import LightPostSerializer, PostSerializer
 
 
 class PostListAPI(ListAPIView):
