@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # third party apps
     "rest_framework",
+    "corsheaders",
     # Local apps
     "ware",
     "authentication",
@@ -33,6 +34,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    
+    "corsheaders.middleware.CorsMiddleware",
+    
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -92,6 +96,18 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],
+    # "DEFAULT_AUTHENTICATION_CLASSES": [
+    #     # "rest_framework.authentication.SessionAuthentication",
+    #     # "rest_framework.authentication.TokenAuthentication",
+    #     "rest_framework_simplejwt.authentication.JWTAuthentication",
+    # ],
+}
+
+
 AUTH_USER_MODEL = "authentication.User"
 
 
@@ -119,3 +135,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 STATISTICFILES_DIRS = [os.path.join(BASE_DIR, "frontend/build/static")]
+
+
+CORS_ALLOW_ALL_ORIGINS = True

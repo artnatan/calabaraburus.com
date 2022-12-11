@@ -25,4 +25,4 @@ class LightPostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ["theme", "short_description", "author"]
+        fields = ["id", "theme", "short_description", "author"]

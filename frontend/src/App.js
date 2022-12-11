@@ -1,51 +1,38 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
+
 import NaviBar from './components/navibar.js';
+import ProjectPage from './pages/ProjectPage';
+import ProjectsList from './pages/ProjectsList';
+import PostsList from './pages/PostsList';
+import PostPage from './pages/PostPage';
+import Assembly from './pages/Assembly';
+import Authentication from './pages/Auth';
 
-import { Home } from './pages/Home';
-import { Projects } from './pages/Projects';
-import { AboutUs } from './pages/About';
-import { Contact } from './pages/Contact';
-
-import port from './img/port.png';
-import sword from './img/sword_2.png';
-import hedgehog from './img/ezch.png';
-import piu from './img/piu_1.png';
-import jonka from './img/jonka.png';
-import fan from './img/cubeguys_footballer_10.png';
-import dom from './img/dom_1.png';
-import island from './img/island_1.png';
-import car from './img/car_2.png';
 
 function App() {
   return (
-    <body>
-      <header>
-        <NaviBar />
-      </header>
-      <main>
-        <div >
-          <Home banner={port} />
-        </div>
-        <hr />
+    <>
+      <NaviBar />
 
-        <div id='projects' style={{ "paddingTop": "100px" }}>
-          <Projects project_1={sword} project_2={hedgehog} project_3={piu} project_4={fan} project_5={jonka} />
-        </div>
-        <hr />
+      <Routes> 
 
-        <div id='about' style={{ "paddingTop": "100px" }}>
-          <AboutUs slide_1={dom} slide_2={car} slide_3={island} />
-        </div>
-        <hr />
+        <Route path="/" element={<Assembly />} />
 
-        <div id='contact' style={{ "paddingTop": "100px" }}>
-          <Contact />
-        </div>
+        <Route path="authentication/" element={<Authentication />} />
 
-        <div style={{ "paddingTop": "100px" }}></div>
-      </main>
-    </body>
+        <Route path="products/" element={<ProjectsList />} />
+        <Route path="products/:id" element={<ProjectPage />} />
+
+        <Route path="posts/" element={<PostsList />} />
+        <Route path="posts/:id" element={<PostPage />} />
+
+      </Routes>
+
+    </>
   );
 }
 

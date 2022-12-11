@@ -17,7 +17,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ["name", "description", "author"]
+        fields = ["name", "description", "author", "image_link"]
 
 
 class LightProductSerializer(serializers.ModelSerializer):
@@ -25,4 +25,4 @@ class LightProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ["name", "short_description", "author"]
+        fields = ["id", "name", "short_description", "author", "image_link"]

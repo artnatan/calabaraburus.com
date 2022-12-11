@@ -69,7 +69,9 @@ export default function Cards(props) {
                     <Card.Body className="text-center">
                         <Card.Title>Naumachia</Card.Title>
                         <Card.Text>Naumachia is a ships battle arena.</Card.Text>
-                        <Button variant="outline-secondary">Learn more</Button>
+                        <Button variant="outline-secondary">
+                            <Card.Link to="/products/1">Learn more</Card.Link>
+                        </Button>
                     </Card.Body>
                 </Card>
 
