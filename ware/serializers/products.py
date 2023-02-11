@@ -17,7 +17,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ["name", "description", "author", "image_link"]
+        fields = "__all__"
 
 
 class LightProductSerializer(serializers.ModelSerializer):

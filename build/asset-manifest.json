@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.181647e9.css",
+    "main.js": "/static/js/main.b12f4ebe.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/piu.png": "/static/media/piu.e7612f6b0953941ed18f.png",
+    "static/media/jonka.png": "/static/media/jonka.1d57291f7e03003b75be.png",
+    "static/media/e_city_1.png": "/static/media/e_city_1.506cf75eb9cd047697f6.png",
+    "static/media/ships_battle_2.png": "/static/media/ships_battle_2.369ed52e6bcae1a20d77.png",
+    "static/media/ships_battle_3.png": "/static/media/ships_battle_3.eadcdfb3ec74821ec5eb.png",
+    "static/media/piu_1.png": "/static/media/piu_1.117c00c35ae52d87083c.png",
+    "static/media/cubeguys_footballer_10.png": "/static/media/cubeguys_footballer_10.f25eee5cb429fe02a6d8.png",
+    "static/media/castle_2.png": "/static/media/castle_2.f021655e848b20baebf1.png",
+    "static/media/sword_2.png": "/static/media/sword_2.2de52d67cbb909202a1b.png",
+    "static/media/ezch.png": "/static/media/ezch.02008e800e37ff5bc583.png",
+    "static/media/a_city.png": "/static/media/a_city.274f8f88d688731f51ec.png",
+    "static/media/port.png": "/static/media/port.786a8d11cd85d5c53565.png",
+    "static/media/selo.png": "/static/media/selo.f7a717b19733d9a2887e.png",
+    "static/media/saloon.png": "/static/media/saloon.2f6842a4ba041d144f0d.png",
+    "static/media/city.png": "/static/media/city.9315452848302d735c44.png",
+    "static/media/sheriff.png": "/static/media/sheriff.febaee808648a7dba9e6.png",
+    "static/media/island_1.png": "/static/media/island_1.d1bafd092d6d9e0dea9a.png",
+    "static/media/dom_1.png": "/static/media/dom_1.c7365ef4e9d9cdaf550e.png",
+    "static/media/car_2.png": "/static/media/car_2.0ecb6cae6b21c14469ab.png",
+    "static/media/NaumahiaText.png": "/static/media/NaumahiaText.45b715c44e3fe9eff532.png",
+    "static/media/emblemWhite.png": "/static/media/emblemWhite.58eab7927c48dd0df34e.png",
+    "static/media/instagram.svg": "/static/media/instagram.8ff7ce92ad753b591ed4c1d03e84c026.svg",
+    "static/media/facebook.svg": "/static/media/facebook.1d60f030f88d365627c35afd0f0f9d38.svg",
+    "index.html": "/index.html",
+    "static/media/patreon.svg": "/static/media/patreon.604105c94f3d202c589b6eb2dc4c9366.svg",
+    "main.181647e9.css.map": "/static/css/main.181647e9.css.map",
+    "main.b12f4ebe.js.map": "/static/js/main.b12f4ebe.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.181647e9.css",
+    "static/js/main.b12f4ebe.js"
+  ]
+}

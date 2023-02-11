@@ -13,7 +13,10 @@ export default function TopProject() {
                     Choose a warship and join an exciting sea battle with your opponent.
                 </p>
                 <div className="text-center" style={{"paddingTop": "50px"}}>
-                    <Button variant="outline-secondary" style={{"width": "140px"}}>Download</Button>
+                    <Button 
+                        href="https://play.google.com/store/apps/details?id=com.Calabaraburus.Naumachia"
+                        variant="outline-secondary" 
+                        style={{"width": "140px"}}>Download</Button>
                 </div>
             </Stack>
         </Container>

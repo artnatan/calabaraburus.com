@@ -32,7 +32,42 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+.edit-panel {
+  position: fixed;
+  right: 2.5%;
+  bottom: 40px;
+  transform: scale(2);
+}
+
+.edit-panel-comment {
+  /* right: 2.5%; */
+  transform: scale(1.5);
+}
+
+.add-icon:hover {
+
+  transform: scale(1.3);
+}
+
+.edit-icon:hover {
+
+  transform: scale(1.3);
+}
+
+
+
+/* .add-icon:hover {
+
+  transform: scale(1.3);
+}
+
+.edit-icon:hover {
+
+  transform: scale(1.3);
+} */

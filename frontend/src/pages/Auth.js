@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Form, Button, Row, Col } from 'react-bootstrap'
 
 
-function Authentication() {
+function Auth() {
 
     // const [show, setShow] = useState(false);
 
@@ -76,4 +76,4 @@ function Authentication() {
     )
 }
 
-export default Authentication
+export default Auth;

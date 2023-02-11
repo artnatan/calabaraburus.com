@@ -17,7 +17,10 @@ const ProjectsList = () => {
     }
 
     return (
+
+
         <Container>
+            
             <div className="projects-list text-center" style={{ "paddingTop": "100px" }}>
                 <CardGroup>
                     {projects.map((project, index) => (
@@ -39,6 +42,7 @@ const ProjectsList = () => {
                 </CardGroup>
             </div>
         </Container>
+ 
     )
 }
 

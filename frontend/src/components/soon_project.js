@@ -6,7 +6,7 @@ export default function SoonProject() {
     return (
         <Container>
             <Stack gap={2} className="col-md-5 mx-auto">
-                <p className="text-center" style={{"font-size": "100px", "font-weight": "bold"}}>SOON</p>
+                <p className="text-center" style={{"fontSize": "100px", "fontWeight": "bold"}}>SOON</p>
                 <Image src={Piu} className="d-block w-100" alt="piu" style={{ "paddingTop": "50px" }} />
                 <p style={{ "paddingTop": "50px" }}>Dirty Billy is a menace of peaceful towns
                     and trading stagecoaches, with his six-shot revolver of the largest caliber

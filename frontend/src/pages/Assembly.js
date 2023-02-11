@@ -9,6 +9,7 @@ import { Home } from './Home';
 import { Projects } from './Projects';
 import { AboutUs } from './About';
 import { Contact } from './Contact';
+// import { Bottom } from './Bottom';
 
 import port from '../img/port.png';
 import sword from '../img/sword_2.png';
@@ -22,7 +23,7 @@ import car from '../img/car_2.png';
 
 function Assembly() {
   return (
-    <body>
+    <>
       {/* <header>
         <NaviBar />
       </header> */}
@@ -46,9 +47,13 @@ function Assembly() {
           <Contact />
         </div>
 
-        <div style={{ "paddingTop": "100px" }}></div>
+        {/* <div id='bottom' style={{ "paddingTop": "20px" }}>
+          <Bottom />
+        </div> */}
+{/* 
+        <div style={{ "paddingTop": "100px" }}></div> */}
       </main>
-    </body>
+    </>
   );
 }
 

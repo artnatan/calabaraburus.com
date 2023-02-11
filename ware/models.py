@@ -9,6 +9,7 @@ class Product(TimeStampMixin):
     description = models.TextField()
     short_description = models.TextField(max_length=250, null=True)
     image_link = models.TextField(max_length=400, null=True)
+    img = models.ImageField(upload_to='project_images', null=True, blank=False)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL,

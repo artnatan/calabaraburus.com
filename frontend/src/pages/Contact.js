@@ -11,13 +11,13 @@ export function Contact() {
         <Container>
 
             <Stack gap={2} className="col-md-5 mx-auto text-center">
-                <h1 style={{ "font-weight": "bold" }}>Contact</h1>
+                <h1 style={{ "fontWeight": "bold" }}>Contact</h1>
             </Stack>
 
             <Row style={{ "paddingTop": "100px" }} className="col-md-5 mx-auto text-center">
                 <Col>
-                    <p className="text-start" style={{ "font-weight": "bold" }}>CALABARABURUS LAB</p>
-                    <p className="text-start" style={{ "font-weight": "bold" }}>UKRAINE</p>
+                    <p className="text-start" style={{ "fontWeight": "bold" }}>CALABARABURUS LAB</p>
+                    <p className="text-start" style={{ "fontWeight": "bold" }}>UKRAINE</p>
                 </Col>
                 <Col className="text-center" style={{ "color": "#feb236" }}>
                     <p>DEV@CALABARABURUS.COM</p>

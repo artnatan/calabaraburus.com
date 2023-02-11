@@ -1,15 +1,34 @@
-import React from 'react'
-import { Nav, Navbar, Container, Image, Form, Button } from 'react-bootstrap'
+import React, { Fragment } from 'react';
+import { Nav, Navbar, Container, Image, Button } from 'react-bootstrap';
+import { logout } from '../pages/actions/auth';
+import { connect } from 'react-redux';
 
-import logo from '../img/emblemWhite.png'
+import logo from '../img/emblemWhite.png';
+import Insta from '../icons/instagram.svg'
+import Fb from '../icons/facebook.svg'
+import Patreon from '../icons/patreon.svg'
 
-export default function NaviBar() {
 
-    // const [show, setShow] = useState(false);
+const NaviBar = ({ logout, isAuthenticated }) => {
 
-    // const handleShow = () => setShow(true)
+    const guestLinks = () => (
+        <Fragment>
+            <Button
+                href="/login"
+                variant="outline-secondary"
+                className="mr-2"
+                type="submit">Log In</Button>
+        </Fragment>
+    )
 
-    // const handleClose = () => setShow(false)
+    const authLinks = () => (
+        <Button
+            href="/"
+            variant="outline-secondary"
+            className="mr-2"
+            type="submit"
+            onClick={logout}>Log Out</Button>
+    )
 
     return (
         <>
@@ -28,42 +47,33 @@ export default function NaviBar() {
                             <Nav.Link disabled> | </Nav.Link>
                             <Nav.Link href="/posts">Thoughts</Nav.Link>
                         </Nav>
-                        <Form className="d-flex">
-                            <Button href="/authentication" variant="outline-secondary" className="mr-2">Log In</Button>
-                        </Form>
+
+                        <Nav className="mr-auto">
+                            <Nav.Link href="https://www.instagram.com/calabaraburus.games/" className="add-icon">
+                                <Image src={Insta} style={{ width: "25px" }} />
+                            </Nav.Link>
+                            <Nav.Link href="https://www.facebook.com/calabaraburus/" className="add-icon">
+                                <Image src={Fb} style={{ width: "25px" }} />
+                            </Nav.Link>
+                            <Nav.Link href="https://www.patreon.com/calabaraburus/" className="add-icon">
+                                <Image src={Patreon} style={{ width: "25px" }} />
+                            </Nav.Link>
+                            <Nav.Link disabled> | </Nav.Link>
+                        </Nav>
+                        
+                        {isAuthenticated ? authLinks() : guestLinks()}
+
 
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
 
-            {/* <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Log In</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" />
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                            </Form.Text>
-                        </Form.Group>
-
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="Check me out" />
-                        </Form.Group>
-                        <Button variant="primary" type="submit">
-                            Submit
-                        </Button>
-                    </Form>
-                </Modal.Body>
-            </Modal> */}
-
         </>
     )
 }
+
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+})
+
+export default connect(mapStateToProps, { logout })(NaviBar)
