@@ -19,7 +19,7 @@ const CommentsPage = ({ isAuthenticated, user }) => {
     }, [id])
 
     let getComments = async () => {
-        let response = await fetch(`http://artnatan.github.io/calabaraburus.com/posts/${id}/comments`)
+        let response = await fetch(`http://localhost:8000/posts/${id}/comments`)
         let data = await response.json()
         setComments(data)
     }
@@ -37,7 +37,7 @@ const CommentsPage = ({ isAuthenticated, user }) => {
                 'Content-Type': 'application/json',
                 'Authorization': `JWT ${localStorage.getItem('access')}`
             },
-            url: `http://artnatan.github.io/calabaraburus.com//posts/${id}/comments/create/`,
+            url: `http://localhost:8000/posts/${id}/comments/create/`,
             data: formField
         }).then((response) => {
             console.log(response.data);

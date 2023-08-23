@@ -25,7 +25,7 @@ const PostNewPage = (user) => {
                 'Content-Type': 'multipart/form-data',
                 'Authorization': `JWT ${localStorage.getItem('access')}`
             },
-            url: "http://artnatan.github.io/calabaraburus.com/posts/create/",
+            url: "http://localhost:8000/posts/create/",
             data: formField
         }).then((response) => {
             console.log(response.data)
