@@ -12,11 +12,22 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: '3.9'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-      - name: Install deps
+      - name: Install python deps
         uses: VaultVulp/action-pipenv@v2.0.1
         with:
           command: install -d
+
+      - name: Install node deps
+        working-directory: ./frontend  # Папка фронтенда
+        run: npm install
+  
+      - name: Build
+        working-directory: ./frontend  # Папка фронтенда
+        run: npm run build
           
       - name: Run black
         uses: VaultVulp/action-pipenv@v2.0.1
