@@ -1,21 +1,4 @@
-name: Build React App
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:name: Build and Deploy React App
+name: Build and Deploy React App
 
 on:
   push:
@@ -28,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 14  # Версия Node.js
+          node-version: 16  # Версия Node.js
 
       - name: Install Dependencies
         working-directory: ./frontend  # Папка фронтенда
@@ -41,24 +24,4 @@ jobs:
 
       - name: Build
         working-directory: ./frontend  # Папка фронтенда
-        run: npm run build
-
-deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages  # Ветка, на которую будет происходить развертывание
-          FOLDER: frontend/build  # Папка с собранным проектом фронтенда
-
-          node-version: 14
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build
         run: npm run build
