@@ -15,7 +15,7 @@ const ProjectPage = () => {
     }, [id])
 
     let getProject = async () => {
-        let response = await fetch(`http://localhost:8000/products/${id}/`)
+        let response = await fetch(`http://artnatan.github.io/calabaraburus.com/products/${id}/`)
         let data = await response.json()
         setProject(data)
     }

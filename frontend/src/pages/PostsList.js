@@ -12,7 +12,7 @@ const PostsList = ({ isAuthenticated }) => {
     }, [])
 
     let getPosts = async () => {
-        let response = await fetch("http://localhost:8000/posts/")
+        let response = await fetch("http://artnatan.github.io/calabaraburus.com/posts/")
         let data = await response.json()
         setPosts(data)
     }

@@ -11,7 +11,7 @@ const ProjectsList = () => {
     }, [])
 
     let getProjects = async () => {
-        let response = await fetch("http://localhost:8000/products/")
+        let response = await fetch("http://artnatan.github.io/calabaraburus.com/products/")
         let data = await response.json()
         setProjects(data)
     }

@@ -16,7 +16,7 @@ const PostsListUpdate = () => {
 
     let getPosts = async () => {
 
-        let response = await fetch("http://localhost:8000/posts/update/", {
+        let response = await fetch("http://artnatan.github.io/calabaraburus.com/posts/update/", {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json',

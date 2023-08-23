@@ -16,7 +16,7 @@ const CommentUpdatePage = () => {
     }, [post_id, id])
 
     let getComment = async () => {
-        let response = await fetch(`http://localhost:8000/posts/${post_id}/comments/${id}/`, {
+        let response = await fetch(`http://artnatan.github.io/calabaraburus.com/posts/${post_id}/comments/${id}/`, {
             method: "get",
             headers: {
                 'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const CommentUpdatePage = () => {
                 'Content-Type': 'application/json',
                 'Authorization': `JWT ${localStorage.getItem('access')}`
             },
-            url: `http://localhost:8000/posts/${post_id}/comments/${id}/update/`,
+            url: `http://artnatan.github.io/calabaraburus.com/posts/${post_id}/comments/${id}/update/`,
             data: formField
         })
 
@@ -52,7 +52,7 @@ const CommentUpdatePage = () => {
                 'Content-Type': 'application/json',
                 'Authorization': `JWT ${localStorage.getItem('access')}`
             },
-            url: `http://localhost:8000/posts/${post_id}/comments/${id}/update`
+            url: `http://artnatan.github.io/calabaraburus.com/posts/${post_id}/comments/${id}/update`
         }).then((response) => {
             console.log(response.data)
         })

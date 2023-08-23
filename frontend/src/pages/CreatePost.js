@@ -14,7 +14,7 @@ const CreatePost = () => {
     }, [id])
 
     let getPost = async () => {
-        let response = await fetch(`http://localhost:8000/posts/${id}`)
+        let response = await fetch(`http://artnatan.github.io/calabaraburus.com/posts/${id}`)
         let data = await response.json()
         setPost(data)
     }
