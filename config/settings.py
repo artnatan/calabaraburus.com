@@ -86,7 +86,7 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "info.calabaraburus@gmail.com"
-EMAIL_HOST_PASSWORD = "xekatxzvfyfscdtk"
+EMAIL_HOST_PASSWORD = "*****************"
 EMAIL_USE_TLS = True
 
 
@@ -118,9 +118,9 @@ REST_FRAMEWORK = {
         # "rest_framework.authentication.TokenAuthentication",
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
+    "DEFAULT_RENDERER_CLASSES": [
+        "rest_framework.renderers.JSONRenderer",
+        "rest_framework.renderers.BrowsableAPIRenderer",
     ]
     # "DEFAULT_PARSER_CLASSES": (
     #     "rest_framework.parsers.JSONParser",
