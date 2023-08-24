@@ -2,11 +2,11 @@ from django.urls import path
 
 from post.api.comment import CommentsCreateAPI, CommentsListAPI, CommentsUpdateAPI
 from post.api.post import (
-    PostListAPI,
-    PostRetrieveAPI,
     PostCreateAPI,
-    PostUpdateAPI,
+    PostListAPI,
     PostListIsAuthenticatedAPI,
+    PostRetrieveAPI,
+    PostUpdateAPI,
 )
 
 posturls = [

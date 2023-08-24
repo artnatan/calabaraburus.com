@@ -1,5 +1,6 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.permissions import AllowAny
+
 from ware.models import Product
 from ware.serializers.products import LightProductSerializer, ProductSerializer
 

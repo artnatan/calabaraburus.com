@@ -1,14 +1,14 @@
 from rest_framework.generics import (
+    CreateAPIView,
     ListAPIView,
     RetrieveAPIView,
-    CreateAPIView,
     RetrieveUpdateDestroyAPIView,
 )
+from rest_framework.parsers import FormParser, MultiPartParser
+from rest_framework.permissions import AllowAny, IsAuthenticated
 
 from post.models import Post
 from post.serializers.post import LightPostSerializer, PostSerializer
-from rest_framework.parsers import MultiPartParser, FormParser
-from rest_framework.permissions import IsAuthenticated, AllowAny
 
 
 class PostListAPI(ListAPIView):
