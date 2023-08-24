@@ -74,5 +74,4 @@ class User(AbstractBaseUser, PermissionsMixin, TimeStampMixin):
     REQUIRED_FIELDS = []
 
     class Meta:
-
         verbose_name_plural = "Users"

@@ -1,12 +1,10 @@
 from rest_framework.generics import (
     ListAPIView,
     CreateAPIView,
-    UpdateAPIView,
-    RetrieveAPIView,
     RetrieveUpdateDestroyAPIView,
 )
 
-from post.models import Comment, Post
+from post.models import Comment
 from post.serializers.comment import CommentSerializer
 
 from rest_framework.permissions import IsAuthenticated, AllowAny

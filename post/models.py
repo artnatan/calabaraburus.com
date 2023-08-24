@@ -8,7 +8,7 @@ class Post(TimeStampMixin):
     theme = models.CharField(max_length=100)
     description = models.TextField()
     short_description = models.TextField(null=True, max_length=250)
-    img = models.ImageField(upload_to='post_images', null=True, blank=False)
+    img = models.ImageField(upload_to="post_images", null=True, blank=False)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL,

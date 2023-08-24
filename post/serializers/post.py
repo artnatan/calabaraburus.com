@@ -21,15 +21,14 @@ class PostSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
     def validate(self, attrs):
-
         short_desc = self.context["request"].data["description"]
-        if len(short_desc) >=250:
+        if len(short_desc) >= 250:
             attrs["short_description"] = f"{short_desc[:247]}..."
         else:
             attrs["short_description"] = short_desc
 
         attrs["author_id"] = self.context["request"].user.id
-            
+
         return attrs
 
 
@@ -39,8 +38,6 @@ class LightPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ["id", "theme", "short_description", "author", "img"]
-
-
 
 
 class PostAssignSerializer(serializers.ModelSerializer):

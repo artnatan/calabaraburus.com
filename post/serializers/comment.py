@@ -10,7 +10,6 @@ class CommentSerializer(serializers.ModelSerializer):
         read_only_fields = ["post", "user", "prev_comment"]
 
     def validate(self, attrs: dict) -> dict:
-
         request = self.context["request"]
 
         post_id: id = request.parser_context["kwargs"]["post_id"]
