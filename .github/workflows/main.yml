@@ -23,10 +23,6 @@ jobs:
         run: |
           pipenv install --deploy --ignore-pipfile
 
-      - name: Run Tests
-        run: |
-          pipenv run python your_test_script.py  # Замените на имя вашего файла с тестами
-
       - name: Cleanup
         run: |
           pipenv --rm
