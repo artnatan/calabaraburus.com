@@ -17,15 +17,11 @@ jobs:
         run: pip install pipenv
 
       - name: Install Dependencies
-        run: |
-          pipenv install --deploy --ignore-pipfile
+        run: pipenv install --dev
 
       - name: Cleanup
         run: |
           pipenv --rm
-      
-      - name: Install Black
-        run: pip install black
           
       - name: Run black
         run: black --check ./
