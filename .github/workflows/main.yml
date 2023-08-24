@@ -23,18 +23,6 @@ jobs:
       - name: Cleanup
         run: |
           pipenv --rm
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          
-      - name: Install node deps
-        working-directory: ./frontend  # Папка фронтенда
-        run: npm install
-  
-      - name: Build
-        working-directory: ./frontend  # Папка фронтенда
-        run: npm run build
           
       - name: Run black
         uses: VaultVulp/action-pipenv@v2.0.1
