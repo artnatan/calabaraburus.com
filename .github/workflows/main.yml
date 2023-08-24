@@ -25,16 +25,16 @@ jobs:
           pipenv --rm
           
       - name: Run black
-        uses: VaultVulp/action-pipenv@v2.0.1
+        uses: VaultVulp/action-pipenv@v2022.11.30
         with:
           command: run black --check ./
 
       - name: Run isort
-        uses: VaultVulp/action-pipenv@v2.0.1
+        uses: VaultVulp/action-pipenv@v2022.11.30
         with:
           command: run isort --check-only ./      
         
       - name: Run linter
-        uses: VaultVulp/action-pipenv@v2.0.1
+        uses: VaultVulp/action-pipenv@v2022.11.30
         with:
           command: run flake8 ./
