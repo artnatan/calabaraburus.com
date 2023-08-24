@@ -13,8 +13,8 @@ jobs:
         with:
           python-version: '3.10'
 
-      # - name: Install Pipenv
-      #   run: pip install pipenv
+      - name: Install Pipenv
+        run: pip install pipenv
 
       - name: Install Dependencies
         uses: VaultVulp/action-pipenv@v2.0.1
