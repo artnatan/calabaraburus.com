@@ -17,10 +17,13 @@ jobs:
       - name: Install Pipenv
         run: pip install pipenv
 
+      # - name: Install Dependencies
+      #   uses: VaultVulp/action-pipenv@v2.0.1
+      #   with:
+      #     command: install -d
+
       - name: Install Dependencies
-        uses: VaultVulp/action-pipenv@v2.0.1
-        with:
-          command: install -d
+        run: pipenv install -d
           
       - name: Run black
         run: black --check ./
