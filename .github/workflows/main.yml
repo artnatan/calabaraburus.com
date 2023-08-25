@@ -8,30 +8,25 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+  
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
           python-version: '3.10'
-
-      - name: Install Pipenv
+  
+      - name: Install pipenv
         run: pip install pipenv
-
-      - name: Install Dependencies
-        run: |
-          pipenv install --deploy --ignore-pipfile
-
-      - name: Cleanup
-        run: |
-          pipenv --rm
-      
-      - name: Install Black
-        run: pip install black
-          
-      - name: Run black
-        run: black --check ./
-
+  
+      - name: Install Dependencies with pipenv
+        run: pipenv install --dev
+  
+      - name: Run Black
+        run: pipenv run black .
+  
       - name: Run isort
-        run: isort --check-only .     
+        run: pipenv run isort --check-only .     
         
       - name: Run linter
         run:  flake8 ./
